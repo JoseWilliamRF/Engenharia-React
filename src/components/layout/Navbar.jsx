@@ -8,7 +8,7 @@ function Navbar() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link to="/">
-          <img className={styles.c3t_logo} src={logo} alt="C3T lOGO" />{' '}
+          <img className={styles.logo_img} src={logo} alt="lOGO" />{' '}
         </Link>
         <ul>
           <li>
