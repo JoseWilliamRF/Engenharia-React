@@ -5,33 +5,87 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={styles.navbar}>
         <Link to="/">
-          <img src={logo} alt="C3T lOGO" />{' '}
+          <img className={styles.c3t_logo} src={logo} alt="C3T lOGO" />{' '}
         </Link>
         <ul>
           <li>
-            <NavLink to="/">ÍNICIO </NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              ÍNICIO{' '}
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/AreasDeAtuacao">ÁREAS DE ATUAÇÃO</NavLink>
+            <NavLink
+              to="/AreasDeAtuacao"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              ÁREAS DE ATUAÇÃO
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Projetos">PROJETOS</NavLink>
+            <NavLink
+              to="/Projetos"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              PROJETOS
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Sobre">SOBRE</NavLink>
+            <NavLink
+              to="/Sobre"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              SOBRE
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/TrabalheConosco">TRABALHE CONOSCO</NavLink>
+            <NavLink
+              to="/TrabalheConosco"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              TRABALHE CONOSCO
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Contato">CONTATO</NavLink>
+            <NavLink
+              to="/Contato"
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.nav_link} ${styles.active}`
+                  : styles.nav_link
+              }
+            >
+              CONTATO
+            </NavLink>
           </li>
         </ul>
 
-        <NavLink to="/Contato">FALE CONOSCO</NavLink>
+        <Link to="/Contato">FALE CONOSCO</Link>
         <button></button>
       </nav>
     </header>
