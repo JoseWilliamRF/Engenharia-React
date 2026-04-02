@@ -1,0 +1,20 @@
+.btn_default {
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Mantive as suas cores originais em azul */
+  background-color: #316a88;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn_default:hover {
+  background-color: #244669;
+}
