@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from './LinkButton.module.css';
 
-function LinkButton({ to, text, customClass }) {
+function LinkButton({ to, text, customClass, onClick }) {
   return (
-    <Link to={to} className={`${styles.btn_default} ${customClass || ''}`}>
+    <Link
+      to={to}
+      className={`${styles.btn_default} ${customClass || ''}`}
+      onClick={onClick}
+    >
       {text}{' '}
     </Link>
   );

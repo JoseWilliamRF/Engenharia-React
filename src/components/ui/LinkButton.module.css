@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   /* Mantive as suas cores originais em azul */
-  background-color: #316a88;
+  background-color: #1e2325;
   border-radius: 12px;
   padding: 10px 14px;
   font-weight: 600;
@@ -16,5 +16,5 @@
 }
 
 .btn_default:hover {
-  background-color: #244669;
+  background-color: #393d41;
 }

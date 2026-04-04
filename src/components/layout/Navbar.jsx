@@ -23,6 +23,7 @@ function Navbar() {
         >
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/"
               className={({ isActive }) =>
                 isActive
@@ -35,6 +36,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/AreasDeAtuacao"
               className={({ isActive }) =>
                 isActive
@@ -47,6 +49,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/Projetos"
               className={({ isActive }) =>
                 isActive
@@ -59,6 +62,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/Sobre"
               className={({ isActive }) =>
                 isActive
@@ -71,6 +75,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/TrabalheConosco"
               className={({ isActive }) =>
                 isActive
@@ -83,6 +88,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
+              onClick={() => setMenuAberto(false)}
               to="/Contato"
               className={({ isActive }) =>
                 isActive
@@ -96,6 +102,7 @@ function Navbar() {
         </ul>
 
         <LinkButton
+          onClick={() => setMenuAberto(false)}
           to="/Contato"
           text={'FALE CONOSCO'}
           customClass={styles.esconder_mobile}
