@@ -40,13 +40,34 @@ video {
 }
 
 .hero_title {
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .hero_subtitle {
-  max-width: 700px;
+  max-width: 650px;
   margin: 0 auto;
   font-weight: 300;
   opacity: 0.9;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+  .hero_title {
+    font-size: 1.2rem;
+  }
+  .hero_subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .hero_cta {
+    flex-direction: column;
+  }
+  .hero_social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
 }
