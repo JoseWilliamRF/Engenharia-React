@@ -1,6 +1,7 @@
 import styles from './Footer.module.css';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
+import SocialLinks from '../ui/SocialLinks';
 
 function Footer() {
   return (
@@ -27,35 +28,7 @@ function Footer() {
             ></iframe>
           </div>
         </div>
-        <div className={styles.social_media}>
-          <a
-            href="#"
-            className={styles.social_icon}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="#"
-            className={styles.social_icon}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            <i className="fa-brands fa-whatsapp"></i>
-          </a>
-          <a
-            href="#"
-            className={styles.social_icon}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {' '}
-            <i className="fa-brands fa-linkedin-in"></i>
-          </a>
-        </div>
+        <SocialLinks />
       </div>
       <div className={styles.copy_right}>
         <p>

@@ -13,7 +13,7 @@
 }
 body {
   /* Substitua o caminho abaixo se a sua imagem estiver em outra pasta */
-  background-image: url('../assets/images/backgroundIn.jpg');
+  /* background-image: url('../assets/images/backgroundIn.jpg'); */
   background-size: cover; /* Faz a imagem cobrir a tela toda */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat;
