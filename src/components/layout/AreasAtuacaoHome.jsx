@@ -1,5 +1,8 @@
 import styles from './AreasAtuacaoHome.module.css';
 import { Link } from 'react-router-dom';
+import imgArmazenagem from '../../assets/cards/silo1.jpg';
+import imgAlimenticia from '../../assets/cards/silo2.jpg';
+import imgPortos from '../../assets/cards/intermodal.jpg';
 
 function AreasAtuacaoHome() {
   return (
@@ -18,8 +21,14 @@ function AreasAtuacaoHome() {
       </div>
 
       <div className={styles.cards_grid}>
-        <div className={styles.card}>
-          <Link to="/AreasDeAtuacao#armazenagem">
+        <div
+          className={styles.card}
+          style={{ backgroundImage: `url(${imgArmazenagem})` }}
+        >
+          <Link
+            to="/AreasDeAtuacao#armazenagem"
+            className={styles.card_content}
+          >
             <h3 className={styles.card_title}>Projetos de Armazenagem</h3>
             <p className={styles.card_subtitle}>
               Projetos inteligentes para silos e armazéns industriais. <br />
@@ -28,8 +37,14 @@ function AreasAtuacaoHome() {
             </p>
           </Link>
         </div>
-        <div className={styles.card}>
-          <Link to="/AreasDeAtuacao#alimenticia">
+        <div
+          className={styles.card}
+          style={{ backgroundImage: `url(${imgAlimenticia})` }}
+        >
+          <Link
+            to="/AreasDeAtuacao#alimenticia"
+            className={styles.card_content}
+          >
             <h3 className={styles.card_title}>
               Projetos para Indústria alimentícia
             </h3>
@@ -41,8 +56,14 @@ function AreasAtuacaoHome() {
           </Link>
         </div>
 
-        <div className={styles.card}>
-          <Link to="/AreasDeAtuacao#intermodais">
+        <div
+          className={styles.card}
+          style={{ backgroundImage: `url(${imgPortos})` }}
+        >
+          <Link
+            to="/AreasDeAtuacao#intermodais"
+            className={styles.card_content}
+          >
             <h3 className={styles.card_title}>
               Projetos para portos e terminais intermodais
             </h3>
