@@ -4,6 +4,9 @@
   --cor-primaria: #717377;
   --cor-destaque: #ea580c;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0px;

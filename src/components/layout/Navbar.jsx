@@ -23,7 +23,10 @@ function Navbar() {
         >
           <li>
             <NavLink
-              onClick={() => setMenuAberto(false)}
+              onClick={() => {
+                setMenuAberto(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               to="/"
               className={({ isActive }) =>
                 isActive
@@ -31,7 +34,7 @@ function Navbar() {
                   : styles.nav_link
               }
             >
-              ÍNICIO{' '}
+              INÍCIO{' '}
             </NavLink>
           </li>
           <li>

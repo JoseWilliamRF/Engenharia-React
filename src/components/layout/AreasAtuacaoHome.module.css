@@ -1,0 +1,40 @@
+.areas_container {
+  min-height: 100vh;
+  background-color: var(--cor-fundo); /* O azul escuro que está no seu root */
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards_grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Cria 3 colunas de tamanhos exatamente iguais */
+  gap: 2rem; /* O espaço em branco (respiro) entre um card e outro */
+  margin-top: 3rem; /* Afasta os cards do texto do cabeçalho */
+  width: 100%;
+}
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Um fundo levemente transparente */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Uma bordinha sutil */
+  border-radius: 15px; /* Deixa os cantos arredondados como na sua imagem */
+  padding: 2rem;
+  min-height: 300px; /* Garante que o card tenha uma altura mínima legal */
+}
+.card a {
+  text-decoration: none;
+  color: var(--cor-texto); /* Usa o branco global que você definiu */
+}

@@ -3,6 +3,7 @@ import LinkButton from '../components/ui/LinkButton';
 import SocialLinks from '../components/ui/SocialLinks';
 import { NavLink, Link } from 'react-router-dom';
 import backgroundVideo from '../assets/video/backgroundVideo.mp4';
+import AreasAtuacaoHome from '../components/layout/AreasAtuacaoHome';
 
 function Home() {
   return (
@@ -29,7 +30,7 @@ function Home() {
 
           <div className={styles.hero_cta}>
             <LinkButton
-              to="/AreasDeAtuacao"
+              to="#areas-atuacao"
               text={'ÁREAS DE ATUAÇÃO'}
               customClass={styles.esconder_mobile}
             />
@@ -42,6 +43,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <AreasAtuacaoHome />
     </main>
   );
 }
