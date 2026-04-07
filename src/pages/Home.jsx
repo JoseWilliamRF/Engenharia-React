@@ -4,6 +4,7 @@ import SocialLinks from '../components/ui/SocialLinks';
 import { NavLink, Link } from 'react-router-dom';
 import backgroundVideo from '../assets/video/backgroundVideo.mp4';
 import AreasAtuacaoHome from '../components/layout/AreasAtuacaoHome';
+import NossosClientes from '../components/layout/NossosClientes';
 
 function Home() {
   return (
@@ -36,7 +37,7 @@ function Home() {
             />
 
             <LinkButton
-              to="/NossosClientes"
+              to="#clientes"
               text={'NOSSOS CLIENTES'}
               customClass={styles.esconder_mobile}
             />
@@ -44,6 +45,7 @@ function Home() {
         </div>
       </section>
       <AreasAtuacaoHome />
+      <NossosClientes />
     </main>
   );
 }
