@@ -1,11 +1,14 @@
 .areas_container {
   min-height: 100vh;
-  background-color: var(--cor-fundo); /* O azul escuro que está no seu root */
+  background-color: var(--cor-fundo);
   padding: 100px 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  max-width: 1400px; /* Limita a largura máxima para não "esparramar" */
+  margin: 0 auto;
 }
 .top_title {
   margin-bottom: 1rem;
@@ -31,16 +34,17 @@
 }
 .card {
   border-radius: 15px;
-  min-height: 400px; /* Aumentei um pouco para dar imponência */
+  min-height: 400px;
   background-size: cover;
   background-position: center;
-  overflow: hidden; /* Isso garante que o degradê não vaze pelas bordas arredondadas */
-  /* Removemos o padding daqui, ele vai para o conteúdo agora */
-  border: none;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda simples e quase invisível */
+
   transition:
-    transform 0.2s ease-out,
-    box-shadow 0.2s ease-out;
+    transform 0.3s ease,
+    border 0.3s ease,
+    box-shadow 0.3s ease;
   position: relative;
 }
 .card_title {
@@ -112,6 +116,40 @@
 }
 
 .card:hover {
-  transform: translateY(-5px); /* O card "levanta" um pouco */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Ganha uma sombra no chão */
+  /* Cresce 2% e sobe 5px */
+  transform: scale(1.02) translateY(-5px);
+
+  /* A borda acende de verdade (50% de opacidade branca) */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  /* Sombra de luz simples, sem espalhar demais */
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .areas_container {
+    padding: 30px 5%; /* Reduz o respiro do topo no celular */
+  }
+
+  .cards_grid {
+    grid-template-columns: 1fr; /* Transforma as 3 colunas em 1 só (empilha tudo) */
+    gap: 1.5rem; /* Diminui o espaço entre um card e outro */
+  }
+
+  .card {
+    min-height: 300px;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .top_title h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .card_title {
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+  }
 }

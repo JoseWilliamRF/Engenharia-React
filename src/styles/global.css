@@ -1,5 +1,5 @@
 :root {
-  --cor-fundo: #022859;
+  --cor-fundo: black;
   --cor-texto: white;
   --cor-primaria: #717377;
   --cor-destaque: #ea580c;
@@ -22,4 +22,5 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /* O fundo fica parado quando você rola a página (efeito parallax simples) */
   color: white;
+  background-color: var(--cor-fundo);
 }

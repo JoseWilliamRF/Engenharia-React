@@ -77,7 +77,7 @@ function NossosClientes() {
         </div>
       </div>
       <div className={styles.stats_container}>
-        <div className={styles.stats_item}>
+        <div className={styles.stat_item}>
           <h4 className={styles.stat_number}>
             {' '}
             <Contador alvo={150} />
