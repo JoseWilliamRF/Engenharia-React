@@ -1,0 +1,186 @@
+/* =========================================
+   ESTRUTURA PRINCIPAL
+   ========================================= */
+.areas_main {
+  padding-top: 140px; /* Empurra o conteúdo pra baixo da Navbar */
+  padding-bottom: 80px;
+}
+
+/* --- TÍTULO PRINCIPAL LIMPO E CENTRALIZADO --- */
+.title_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.main_title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0; /* Margens removidas para o wrapper controlar o espaço */
+  margin-bottom: 3rem;
+}
+
+/* O tracinho laranja abaixo do título */
+.main_title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--cor-destaque);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* --- 1. O PAI (Container Split Screen) --- */
+.area_section {
+  display: flex;
+  align-items: flex-start; /* REGRA DE OURO: Permite que o Sticky funcione */
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 12rem;
+  padding: 0 5%;
+}
+
+/* --- 2. COLUNA DA ESQUERDA (Motor Sticky) --- */
+.area_titulo {
+  width: 45%;
+  position: sticky;
+  top: 120px;
+}
+
+.area_titulo h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.area_titulo ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.area_titulo li {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+/* A bolinha laranja customizada */
+.area_titulo li::before {
+  content: '•';
+  color: var(--cor-destaque);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* --- 3. COLUNA DA DIREITA (Imagens) --- */
+.area_images {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.area_images img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================
+   RESPONSIVIDADE: CELULAR E TABLET
+   ========================================= */
+@media screen and (max-width: 996px) {
+  .main_title {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  /* 1. O PAI: Empilhado */
+  .area_section {
+    flex-direction: column;
+    margin-bottom: 5rem;
+    gap: 2rem;
+    position: relative; /* Necessário para o Ambient Glow não vazar */
+  }
+
+  /* 2. O TEXTO: Desliga o Sticky */
+  .area_titulo {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  /* --- MÁGICA 1: LISTA TRANSFORMADA EM CHIPS (PÍLULAS) --- */
+  .area_titulo ul {
+    display: flex;
+    flex-wrap: wrap; /* Faz os itens quebrarem de linha organizadamente */
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .area_titulo h3 {
+    font-size: 1.8rem;
+  }
+
+  .area_titulo li {
+    background: rgba(255, 255, 255, 0.05); /* Fundo de vidro translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px; /* Arredondamento perfeito da pílula */
+    font-size: 0.8rem;
+    padding-left: 0.8rem; /* Reseta o padding antigo */
+  }
+
+  /* Esconde a bolinha laranja antiga, pois agora o formato de pílula é o destaque */
+  .area_titulo li::before {
+    display: none;
+  }
+
+  /* --- MÁGICA 2: CARROSSEL COM ANIMAÇÃO "PING-PONG" --- */
+  .area_images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  /* 1. O Alvo agora é o SpotlightCard (a div que segura a imagem) */
+  .area_images > div {
+    width: 85%;
+    flex-shrink: 0;
+    aspect-ratio: 4 / 3; /* Força o cartão a ter formato de foto retangular, impedindo o esmagamento */
+    border-radius: 16px;
+    animation: autoPanMobile 12s ease-in-out infinite alternate;
+  }
+
+  /* 2. A Imagem apenas preenche o cartão perfeitamente */
+  .area_images img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  @keyframes autoPanMobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 1rem));
+    }
+  }
+}
