@@ -73,10 +73,7 @@
   background-position: center;
   overflow: hidden;
   border: none;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
-  transition:
-    transform 0.2s ease-out,
-    box-shadow 0.2s ease-out;
+  transition: transform 0.3s ease-out;
   position: relative;
   background-repeat: no-repeat;
 }
@@ -84,7 +81,6 @@
 /* Efeito ao passar o mouse: Revela a cor real */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .card_content {
@@ -97,8 +93,8 @@
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.4) 30%,
-    transparent 100%
+    rgba(0, 0, 0, 0.4) 25%,
+    transparent 80%
   );
   text-decoration: none;
   position: relative;
@@ -118,11 +114,10 @@
     to top,
     black 0%,
     black 30%,
-    transparent 40%
+    transparent 25%
   );
   mask-image: linear-gradient(to top, black 0%, black 30%, transparent 40%);
   z-index: -1;
-  transition: all 0.2s ease-out;
 }
 
 .card_title {

@@ -62,6 +62,14 @@
   font-size: 1.8rem;
   cursor: pointer;
 }
+.btn_cta {
+  background-color: rgb(37, 211, 102) !important;
+  color: #ffffff; /* Garante que o texto fique branco */
+}
+
+.btn_cta:hover {
+  background-color: RGB(7, 94, 84) !important;
+}
 
 @media screen and (max-width: 996px) {
   .esconder_mobile {
@@ -82,13 +90,19 @@
     gap: 1.5rem;
     width: 100%;
     padding: 1rem 0;
-    background-color: rgba(2, 40, 89, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+
+    /* ---  VIDRO FOSCO (FUMÊ) --- */
+    /* Fundo preto com 75% de opacidade. Dá contraste para a letra branca, mas ainda deixa ver que tem algo atrás */
+    background: rgba(10, 15, 20, 0.9);
+
+    /*  o desfoque para 20px. I */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+
+    /* Borda sutil apenas em baixo para fechar o menu  */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
-    border-radius: 0px 0px 20px 20px;
   }
+
   .nav_list.menuAberto {
     display: flex !important;
   }

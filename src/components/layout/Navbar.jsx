@@ -108,7 +108,7 @@ function Navbar() {
           onClick={() => setMenuAberto(false)}
           to="/Contato"
           text={'FALE CONOSCO'}
-          customClass={styles.esconder_mobile}
+          customClass={`${styles.esconder_mobile} ${styles.btn_cta}`}
         />
         <button className={styles.mobile_btn} onClick={toggleMenu}>
           <i
